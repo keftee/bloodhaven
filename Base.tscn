@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://kk4yiyxt7slq"]
+[gd_scene load_steps=6 format=3 uid="uid://kk4yiyxt7slq"]
 
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://player.tscn" id="2_83oyo"]
 [ext_resource type="Texture2D" uid="uid://b1nja16fvqoh7" path="res://Art/oppcastle-mod-tiles.png" id="2_b6lr6"]
+[ext_resource type="Script" path="res://player.gd" id="3_7x0am"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
 texture = ExtResource("2_b6lr6")
@@ -1006,6 +1007,7 @@ layer_0/tile_data = PackedInt32Array(1769487, 458753, 2, 1835023, 458753, 3, 190
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_83oyo")]
 position = Vector2(152, 392)
+script = ExtResource("3_7x0am")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(4, 4)
