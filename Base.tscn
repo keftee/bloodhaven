@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://kk4yiyxt7slq"]
+
+[ext_resource type="PackedScene" uid="uid://ckujc0b85rvif" path="res://Ground.tscn" id="1_wj5qc"]
+[ext_resource type="PackedScene" uid="uid://81fw1ag3e186" path="res://Character.tscn" id="2_wdkrr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_20mnw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1d7r8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_wj5qc")]
+physics_material_override = SubResource("PhysicsMaterial_20mnw")
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("2_wdkrr")]
+physics_material_override = SubResource("PhysicsMaterial_1d7r8")
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D2"]

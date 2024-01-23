@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://81fw1ag3e186"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjjri"]
+
+[node name="RigidBody2D2" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(86, 291)
+shape = SubResource("CapsuleShape2D_yjjri")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
