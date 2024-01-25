@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmiv60k80r33s"]
-
-[ext_resource type="Texture2D" uid="uid://bxppik8tn3mvf" path="res://Art/character sprites/bee 1.png" id="1_mjgm4"]
+[gd_scene load_steps=2 format=3 uid="uid://dmiv60k80r33s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bypkb"]
 radius = 7.092
@@ -11,8 +9,3 @@ radius = 7.092
 position = Vector2(2, 3)
 scale = Vector2(1.28714, 0.824644)
 shape = SubResource("CapsuleShape2D_bypkb")
-
-[node name="Bee1" type="Sprite2D" parent="."]
-position = Vector2(2, 2)
-scale = Vector2(0.066, 0.079)
-texture = ExtResource("1_mjgm4")
