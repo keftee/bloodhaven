@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var animation = $AnimatedSprite2D
+@onready var animation = $AnimationPlayer
+@onready var sprite = $Sprite2D
 
 
 @export var SPEED = 150.0
@@ -47,9 +48,9 @@ func _physics_process(delta):
 		else:
 			velocity.x = direction * SPEED
 		if direction < -0.1:
-			animation.set_flip_h(true)
+			sprite.set_flip_h(true)
 		if direction > 0.1:
-			animation.set_flip_h(false)
+			sprite.set_flip_h(false)
 			
 
 		animation.play("walk")
