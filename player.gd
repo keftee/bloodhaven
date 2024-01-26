@@ -14,18 +14,35 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var has_double_jumped = false
 var dashing = false
 var can_dash = true
+var coyote_frames = 6
+var coyote = false
+var last_floor = false
+var jumping = false;
+func _ready():
+	$coyote_timer.wait_time = coyote_frames / 60.0
+
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		jumping = true
 	else:
+		jumping = false
 		has_double_jumped = false
+		
+	if not is_on_floor() and last_floor and not jumping:
+		coyote = true
+		$coyote_timer.start()
+
 
 	# Handle jump.
+	
+	
 	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
+		if is_on_floor() or coyote:
 			velocity.y = JUMP_VELOCITY
+			jumping = true
 		elif not has_double_jumped:
 			velocity.y = DOUBLE_JUMP_VELOCITY
 			has_double_jumped = true
@@ -41,11 +58,19 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	var dash_direcion;
+	if (sprite.is_flipped_h() == false):
+		dash_direcion = 1
+	else:
+		dash_direcion = -1;
+	
+	if dashing:
+		velocity.x = dash_direcion * DASH_VELOCITY
+	
 	var direction = Input.get_axis("left", "right")
 	if direction:
-		if dashing:
-			velocity.x = direction * DASH_VELOCITY
-		else:
+		if not dashing:
+			#velocity.x = direction * DASH_VELOCITY
 			velocity.x = direction * SPEED
 		if direction < -0.1:
 			sprite.set_flip_h(true)
@@ -60,6 +85,7 @@ func _physics_process(delta):
 		animation.stop()
 
 	move_and_slide()
+	last_floor = is_on_floor()
 
 
 func _on_dash_timer_timeout():
