@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://player.tscn" id="2_83oyo"]
 [ext_resource type="Texture2D" uid="uid://b1nja16fvqoh7" path="res://Art/oppcastle-mod-tiles.png" id="2_b6lr6"]
 [ext_resource type="Script" path="res://player.gd" id="3_7x0am"]
+
 [ext_resource type="Texture2D" uid="uid://do33lk6nfhmic" path="res://Art/character sprites/walk_spritesheet.png" id="4_1uxch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
@@ -999,6 +1000,7 @@ texture = ExtResource("2_b6lr6")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0qnaf")
 
+
 [sub_resource type="Animation" id="Animation_mdy8g"]
 resource_name = "walk"
 length = 0.6
@@ -1077,18 +1079,14 @@ layer_0/tile_data = PackedInt32Array(1769487, 458753, 2, 1835023, 458753, 3, 190
 position = Vector2(109, 408)
 script = ExtResource("3_7x0am")
 
+
 [node name="Sprite2D" type="Sprite2D" parent="Character/CharacterBody2D"]
 position = Vector2(3, 2.99999)
 scale = Vector2(0.07225, 0.07225)
 texture = ExtResource("4_1uxch")
 hframes = 7
 
-[node name="Camera2D" type="Camera2D" parent="Character/CharacterBody2D"]
-zoom = Vector2(4, 4)
-process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Character/CharacterBody2D"]
 libraries = {
