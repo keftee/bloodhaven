@@ -1,20 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://81fw1ag3e186"]
+[gd_scene load_steps=3 format=3 uid="uid://dmiv60k80r33s"]
 
-[ext_resource type="Texture2D" uid="uid://bxppik8tn3mvf" path="res://Art/character sprites/bee 1.png" id="1_sudo6"]
+[ext_resource type="Script" path="res://player.gd" id="1_f4od0"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4lytp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bypkb"]
+radius = 7.092
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ag7d6"]
-
-[node name="RigidBody2D2" type="RigidBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_4lytp")
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["character"]]
+script = ExtResource("1_f4od0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(86, 291)
-shape = SubResource("CapsuleShape2D_ag7d6")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
+scale = Vector2(1.28714, 0.824644)
+shape = SubResource("CapsuleShape2D_bypkb")
 
-[node name="Bee1" type="Sprite2D" parent="."]
-position = Vector2(-255, -144)
-scale = Vector2(0.199, 0.225)
-texture = ExtResource("1_sudo6")
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(12, -2)

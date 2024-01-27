@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var muzzle = $Muzzle
+signal bullet_shot(bullet_scene, location)
+var bullet_scene = preload("res://bullet.tscn")
 
 
 @export var SPEED = 150.0
@@ -22,6 +25,14 @@ func _ready():
 	$coyote_timer.wait_time = coyote_frames / 60.0
 
 
+func _process(_delta):
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+
+func shoot():
+	bullet_shot.emit(bullet_scene, muzzle.global_position)
+	
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
