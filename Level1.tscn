@@ -45,10 +45,10 @@ tracks/1/path = NodePath("Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": []
+"values": [7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oqyel"]
@@ -1079,9 +1079,6 @@ scale = Vector2(0.072125, 0.072125)
 texture = ExtResource("3_6o0m1")
 hframes = 7
 
-[node name="Bullet" parent="Character" instance=ExtResource("4_hxuj0")]
-position = Vector2(12, -4)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Character"]
 libraries = {
 "": SubResource("AnimationLibrary_oqyel")
@@ -1097,5 +1094,10 @@ layer_0/tile_data = PackedInt32Array(1769487, 458753, 2, 1835023, 458753, 3, 190
 
 [node name="BulletContainer" type="Node2D" parent="."]
 
+[node name="Bullet" parent="." instance=ExtResource("4_hxuj0")]
+position = Vector2(121, 403)
+
+[connection signal="facing_l" from="Character" to="." method="_on_character_facing_l"]
+[connection signal="facing_r" from="Character" to="." method="_on_character_facing_r"]
 [connection signal="timeout" from="Character/dash_timer" to="Character" method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="Character/dash_again_timer" to="Character" method="_on_dash_again_timer_timeout"]
