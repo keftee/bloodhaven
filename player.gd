@@ -2,6 +2,12 @@ extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var muzzle = $Muzzle
+
+signal bullet_shot(bullet_scene, location)
+signal facing_r()
+signal facing_l()
+var bullet_scene = preload("res://bullet.tscn")
 
 
 @export var SPEED = 150.0
@@ -22,6 +28,14 @@ func _ready():
 	$coyote_timer.wait_time = coyote_frames / 60.0
 
 
+func _process(_delta):
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+
+func shoot():
+	bullet_shot.emit(bullet_scene, muzzle.global_position)
+	
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -58,14 +72,16 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var dash_direcion;
+	var dash_direction
 	if (sprite.is_flipped_h() == false):
-		dash_direcion = 1
+		dash_direction = 1
+		
 	else:
-		dash_direcion = -1;
+		dash_direction = -1;
+		
 	
 	if dashing:
-		velocity.x = dash_direcion * DASH_VELOCITY
+		velocity.x = dash_direction * DASH_VELOCITY
 	
 	var direction = Input.get_axis("left", "right")
 	if direction:
@@ -74,8 +90,10 @@ func _physics_process(delta):
 			velocity.x = direction * SPEED
 		if direction < -0.1:
 			sprite.set_flip_h(true)
+			facing_l.emit()
 		if direction > 0.1:
 			sprite.set_flip_h(false)
+			facing_r.emit()
 			
 
 		animation.play("walk")
