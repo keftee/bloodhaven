@@ -101,6 +101,17 @@ func _physics_process(delta):
 	move_and_slide()
 	last_floor = is_on_floor()
 
+
+const lines: Array[String] = [
+	"This is a creepy place.",
+	"I should be careful around here.",
+	"Whats that? A floating bench?"
+	]
+
+func _unhandled_input(event):
+	if event.is_action_pressed("interact"):
+		DialogueManager.start_dialogue(global_position, lines)
+
 func update_animation():
 	animation_tree.set("parameters/Move/blend_position", direction2.x)
 
