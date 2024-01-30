@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var muzzle = $Muzzle
+@onready var animation_tree : AnimationTree = $AnimationTree
 
 signal bullet_shot(bullet_scene, location)
 signal facing_r()
@@ -24,9 +25,11 @@ var coyote_frames = 6
 var coyote = false
 var last_floor = false
 var jumping = false;
+var direction2;
+
 func _ready():
 	$coyote_timer.wait_time = coyote_frames / 60.0
-
+	animation_tree.active = true
 
 func _process(_delta):
 	if Input.is_action_just_pressed("shoot"):
@@ -48,10 +51,6 @@ func _physics_process(delta):
 	if not is_on_floor() and last_floor and not jumping:
 		coyote = true
 		$coyote_timer.start()
-
-
-	# Handle jump.
-	
 	
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor() or coyote:
@@ -66,12 +65,7 @@ func _physics_process(delta):
 		can_dash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
-		#await(get_tree().create_timer(0.2).timeout)
-		#dashing = false
-		#can_dash = true
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var dash_direction
 	if (sprite.is_flipped_h() == false):
 		dash_direction = 1
@@ -84,6 +78,7 @@ func _physics_process(delta):
 		velocity.x = dash_direction * DASH_VELOCITY
 	
 	var direction = Input.get_axis("left", "right")
+	direction2 = Input.get_vector("left", "right", "down", "up")
 	if direction:
 		if not dashing:
 			#velocity.x = direction * DASH_VELOCITY
@@ -96,15 +91,18 @@ func _physics_process(delta):
 			facing_r.emit()
 			
 
-		animation.play("walk")
+		#animation.play("walk")
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animation.stop()
-
+	
+	update_animation()
 	move_and_slide()
 	last_floor = is_on_floor()
 
+func update_animation():
+	animation_tree.set("parameters/Move/blend_position", direction2.x)
 
 func _on_dash_timer_timeout():
 	dashing = false # Replace with function body.
