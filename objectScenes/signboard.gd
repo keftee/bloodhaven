@@ -7,7 +7,6 @@ func _ready():
 	label = $Label
 	label.visible = false
 
-
 func _on_Area2D_body_entered(body: Node2D) -> void:
 	if body.is_in_group("character"):
 		label.text = Text
@@ -16,4 +15,15 @@ func _on_Area2D_body_entered(body: Node2D) -> void:
 func _on_Area2D_body_exited(body: Node2D) -> void:
 	if body.is_in_group("character"):
 		label.visible = false
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+
+func _on_body_entered(body):
+	if body.is_in_group("character"):
+		label.text = Text
+		label.visible = true
+
+
+func _on_body_exited(body):
+	if body.is_in_group("character"):
+		label.visible = false # Replace with function body.
