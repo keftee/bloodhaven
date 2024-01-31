@@ -3,10 +3,8 @@ extends Node
 
 @onready var text_box_scene = preload("res://Art/textbox/text_box.tscn")
 
-
 var dialogue_lines: Array[String] = []
 var current_line_index = 0
-
 var text_box
 var text_box_postion: Vector2
 
@@ -47,9 +45,11 @@ func _unhandled_input(event):
 		text_box.queue_free()
 		
 		current_line_index += 1
-		if current_line_index > dialogue_lines.size():
+		if current_line_index >= dialogue_lines.size():
 			is_dialogue_active = false
 			current_line_index = 0
+			GlobalScript.SPEED = 150
+			GlobalScript.JUMP_VELOCITY = -300
 			return
 		
 		_show_text_box()

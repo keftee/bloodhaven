@@ -11,8 +11,7 @@ signal facing_l()
 var bullet_scene = preload("res://bullet.tscn")
 
 
-@export var SPEED = 150.0
-@export var JUMP_VELOCITY = -300.0
+#@export var JUMP_VELOCITY = -300.0
 @export var DOUBLE_JUMP_VELOCITY = -200.0
 @export var DASH_VELOCITY : float = 500.0
 
@@ -24,8 +23,8 @@ var can_dash = true
 var coyote_frames = 6
 var coyote = false
 var last_floor = false
-var jumping = false;
-var direction2;
+var jumping = false
+var direction2
 
 func _ready():
 	$coyote_timer.wait_time = coyote_frames / 60.0
@@ -54,7 +53,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor() or coyote:
-			velocity.y = JUMP_VELOCITY
+			velocity.y = GlobalScript.JUMP_VELOCITY
 			jumping = true
 		elif not has_double_jumped:
 			velocity.y = DOUBLE_JUMP_VELOCITY
@@ -65,6 +64,9 @@ func _physics_process(delta):
 		can_dash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
+	
+	#if Input.is_action_just_pressed("interact"):
+		#DialogueManager.start_dialogue(global_position, lines)
 
 	var dash_direction
 	if (sprite.is_flipped_h() == false):
@@ -82,7 +84,7 @@ func _physics_process(delta):
 	if direction:
 		if not dashing:
 			#velocity.x = direction * DASH_VELOCITY
-			velocity.x = direction * SPEED
+			velocity.x = direction * GlobalScript.SPEED
 		if direction < -0.1:
 			sprite.set_flip_h(true)
 			facing_l.emit()
@@ -91,10 +93,10 @@ func _physics_process(delta):
 			facing_r.emit()
 			
 
-		#animation.play("walk")
+		
 		
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, GlobalScript.SPEED)
 		animation.stop()
 	
 	update_animation()
@@ -102,15 +104,13 @@ func _physics_process(delta):
 	last_floor = is_on_floor()
 
 
-const lines: Array[String] = [
-	"This is a creepy place.",
-	"I should be careful around here.",
-	"Whats that? A floating bench?"
-	]
+
 
 func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
-		DialogueManager.start_dialogue(global_position, lines)
+		GlobalScript.SPEED = 0
+		GlobalScript.JUMP_VELOCITY = 0
+		DialogueManager.start_dialogue(global_position, GlobalScript.levels["level" + str(GlobalScript.level)])
 
 func update_animation():
 	animation_tree.set("parameters/Move/blend_position", direction2.x)

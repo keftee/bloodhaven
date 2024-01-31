@@ -1000,7 +1000,6 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0qnaf")
 
 [node name="Level1" type="Node2D"]
-scale = Vector2(8, 8)
 script = ExtResource("1_271hy")
 
 [node name="Background" type="Node2D" parent="."]
@@ -1015,7 +1014,7 @@ layer_0/tile_data = PackedInt32Array(1769487, 458753, 2, 1835023, 458753, 3, 190
 position = Vector2(109, 407)
 
 [node name="Camera2D" type="Camera2D" parent="Character"]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
