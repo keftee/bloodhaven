@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://kk4yiyxt7slq"]
+[gd_scene load_steps=8 format=3 uid="uid://kk4yiyxt7slq"]
 
 [ext_resource type="Script" path="res://Level1.gd" id="1_271hy"]
 [ext_resource type="Texture2D" uid="uid://b1nja16fvqoh7" path="res://Art/oppcastle-mod-tiles.png" id="1_wdg66"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="2_ujcfl"]
 [ext_resource type="PackedScene" uid="uid://8ivqohllcees" path="res://bullet.tscn" id="4_hxuj0"]
+[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/signboard.tscn" id="5_xjw6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
 texture = ExtResource("1_wdg66")
@@ -1024,6 +1025,10 @@ drag_vertical_enabled = true
 
 [node name="Bullet" parent="." instance=ExtResource("4_hxuj0")]
 position = Vector2(121, 403)
+
+[node name="Signboard" parent="." instance=ExtResource("5_xjw6a")]
+position = Vector2(182, 420)
+scale = Vector2(0.05, 0.05)
 
 [connection signal="facing_l" from="Character" to="." method="_on_character_facing_l"]
 [connection signal="facing_r" from="Character" to="." method="_on_character_facing_r"]
