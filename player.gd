@@ -93,7 +93,7 @@ func _physics_process(delta):
 			facing_r.emit()
 			
 
-		
+
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, GlobalScript.SPEED)
@@ -103,6 +103,8 @@ func _physics_process(delta):
 	move_and_slide()
 	last_floor = is_on_floor()
 
+func update_animation():
+	animation_tree.set("parameters/Move/blend_position", direction2.x)
 
 
 
