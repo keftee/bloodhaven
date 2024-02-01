@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://8ivqohllcees" path="res://bullet.tscn" id="4_hxuj0"]
 [ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/signboard.tscn" id="5_xjw6a"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
 texture = ExtResource("1_wdg66")
 14:0/0 = 0
