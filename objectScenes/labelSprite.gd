@@ -1,11 +1,18 @@
 extends Area2D
 
 var label: Label
+const MAX_WIDTH = 4
 @export var Text: String = ''
-# Called when the node enters the scene tree for the first time.
+@export var spriteTexture : Texture
+
 func _ready():
 	label = $Label
 	label.visible = false
+	get_node("Sprite2D").texture = spriteTexture
+
+func _process(delta):
+	label.position.x = (-1) * (label.size.x / 2)
+	delta = delta
 
 func _on_Area2D_body_entered(body: Node2D) -> void:
 	if body.is_in_group("character"):

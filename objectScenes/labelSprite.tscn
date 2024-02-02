@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://qpm32bc6bp66"]
+[gd_scene load_steps=6 format=3 uid="uid://qpm32bc6bp66"]
 
-[ext_resource type="Script" path="res://objectScenes/signboard.gd" id="1_6iypr"]
-[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="2_qq84o"]
+[ext_resource type="Script" path="res://objectScenes/labelSprite.gd" id="1_6iypr"]
 [ext_resource type="FontFile" uid="uid://bvyy6rxnq2hs7" path="res://Art/textbox/vtf-misterpixel.regular.otf" id="3_8olu1"]
 [ext_resource type="Texture2D" uid="uid://r6bavedymmt7" path="res://Art/tooltip.png" id="4_77jvf"]
 
@@ -17,31 +16,32 @@ texture_margin_bottom = 50.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Signboard" type="Area2D"]
+[node name="labelSprite" type="Area2D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_6iypr")
+Text = "Press X"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -104)
+position = Vector2(0, -104)
+scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_3g465")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qq84o")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -168.0
-offset_top = -702.0
-offset_right = 166.0
-offset_bottom = -524.0
+offset_left = -260.0
+offset_top = -1115.0
+offset_right = 260.0
+offset_bottom = -819.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_8olu1")
-theme_override_font_sizes/font_size = 51
+theme_override_font_sizes/font_size = 156
 theme_override_styles/normal = SubResource("StyleBoxTexture_skcdd")
-text = "Press X"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
