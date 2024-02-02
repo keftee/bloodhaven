@@ -114,8 +114,6 @@ func _unhandled_input(event):
 		GlobalScript.JUMP_VELOCITY = 0
 		DialogueManager.start_dialogue(global_position, GlobalScript.levels["level" + str(GlobalScript.level)])
 
-func update_animation():
-	animation_tree.set("parameters/Move/blend_position", direction2.x)
 
 func _on_dash_timer_timeout():
 	dashing = false # Replace with function body.

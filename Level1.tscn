@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://kk4yiyxt7slq"]
+[gd_scene load_steps=11 format=3 uid="uid://kk4yiyxt7slq"]
 
-[ext_resource type="Script" path="res://Level1.gd" id="1_271hy"]
+[ext_resource type="Script" path="res://Level.gd" id="1_271hy"]
 [ext_resource type="Texture2D" uid="uid://b1nja16fvqoh7" path="res://Art/oppcastle-mod-tiles.png" id="1_wdg66"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="2_ujcfl"]
 [ext_resource type="PackedScene" uid="uid://8ivqohllcees" path="res://bullet.tscn" id="4_hxuj0"]
-[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/signboard.tscn" id="5_xjw6a"]
-
+[ext_resource type="PackedScene" uid="uid://ngdl2vrbgeyd" path="res://scaled_camera.tscn" id="4_sikwn"]
+[ext_resource type="PackedScene" uid="uid://bl7sch28f56l4" path="res://bullet_container.tscn" id="5_edoi0"]
+[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="5_xjw6a"]
+[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="6_5kybk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
 texture = ExtResource("1_wdg66")
@@ -1015,22 +1017,20 @@ layer_0/tile_data = PackedInt32Array(1769487, 458753, 2, 1835023, 458753, 3, 190
 [node name="Character" parent="." instance=ExtResource("2_ujcfl")]
 position = Vector2(109, 407)
 
-[node name="Camera2D" type="Camera2D" parent="Character"]
-zoom = Vector2(4, 4)
-process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+[node name="scaledCamera" parent="Character" instance=ExtResource("4_sikwn")]
 
-[node name="BulletContainer" type="Node2D" parent="."]
+[node name="BulletContainer" parent="." instance=ExtResource("5_edoi0")]
 
 [node name="Bullet" parent="." instance=ExtResource("4_hxuj0")]
+visible = false
 position = Vector2(121, 403)
 
 [node name="Signboard" parent="." instance=ExtResource("5_xjw6a")]
 position = Vector2(182, 420)
 scale = Vector2(0.05, 0.05)
-Text = "Press X"
+
+Text = "Press X this is the next word let's see what happens to this"
+spriteTexture = ExtResource("6_5kybk")
 
 [connection signal="facing_l" from="Character" to="." method="_on_character_facing_l"]
 [connection signal="facing_r" from="Character" to="." method="_on_character_facing_r"]
