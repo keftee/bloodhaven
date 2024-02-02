@@ -1028,6 +1028,7 @@ position = Vector2(121, 403)
 [node name="Signboard" parent="." instance=ExtResource("5_xjw6a")]
 position = Vector2(182, 420)
 scale = Vector2(0.05, 0.05)
+
 Text = "Press X this is the next word let's see what happens to this"
 spriteTexture = ExtResource("6_5kybk")
 

@@ -7,6 +7,7 @@ extends MarginContainer
 
 const MAX_WIDTH = 100000
 
+
 var text = ""
 var letter_index = 0
 
