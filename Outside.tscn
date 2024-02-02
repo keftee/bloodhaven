@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4pj4nol5d1hm"]
+[gd_scene load_steps=9 format=3 uid="uid://c4pj4nol5d1hm"]
 
 [ext_resource type="Texture2D" uid="uid://dkoltrk4jom1v" path="res://Art/game jam 2/backgrounds/gatehouse front.png" id="1_uyo2g"]
 [ext_resource type="Texture2D" uid="uid://b055xmjpxrqyy" path="res://Art/game jam 2/tilemap.png" id="2_27lvx"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="3_y3teg"]
+[ext_resource type="Texture2D" uid="uid://s7jc8c4fhwyv" path="res://Art/Luces round white spot.png" id="4_2slen"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1tkjt"]
 
@@ -172,8 +173,9 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(108, 65)
-energy = 0.0
+position = Vector2(34, -33)
+energy = 1.69
+texture = ExtResource("4_2slen")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.717647, 0.392157, 0.2, 1)
