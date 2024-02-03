@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://b7ll72xvyiql7"]
 
-[ext_resource type="Script" path="res://Level.gd" id="1_je2a2"]
+[ext_resource type="Script" path="res://Art/textbox/Level.gd" id="1_je2a2"]
 [ext_resource type="Texture2D" uid="uid://bh6cmv5cak1rj" path="res://Art/oppcastle-tiles.png" id="1_wby4l"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="2_uha6p"]
 [ext_resource type="PackedScene" uid="uid://ngdl2vrbgeyd" path="res://scaled_camera.tscn" id="3_e0xo3"]
-[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="4_2gsyr"]
-[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="5_gccdc"]
 [ext_resource type="PackedScene" uid="uid://8ivqohllcees" path="res://bullet.tscn" id="6_v1kh8"]
+[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="7_c8q25"]
 [ext_resource type="PackedScene" uid="uid://bl7sch28f56l4" path="res://bullet_container.tscn" id="7_ei52l"]
+[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="8_38pai"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_twlhq"]
 texture = ExtResource("1_wby4l")
@@ -965,12 +965,12 @@ position = Vector2(52, -25)
 
 [node name="scaledCamera" parent="CharacterBody2D" instance=ExtResource("3_e0xo3")]
 
-[node name="Signboard" parent="." instance=ExtResource("4_2gsyr")]
-position = Vector2(229, -4)
-scale = Vector2(0.05, 0.05)
-Text = "hahahahaha"
-spriteTexture = ExtResource("5_gccdc")
-
 [node name="Bullet" parent="." instance=ExtResource("6_v1kh8")]
 
 [node name="BulletContainer" parent="." instance=ExtResource("7_ei52l")]
+
+[node name="labelSprite" parent="." instance=ExtResource("7_c8q25")]
+position = Vector2(117, -1)
+scale = Vector2(0.05, 0.05)
+Text = "please work please work please work"
+spriteTexture = ExtResource("8_38pai")

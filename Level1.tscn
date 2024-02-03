@@ -1,14 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://kk4yiyxt7slq"]
 
-[ext_resource type="Script" path="res://Level.gd" id="1_271hy"]
+[ext_resource type="Script" path="res://Art/textbox/Level.gd" id="1_271hy"]
 [ext_resource type="Texture2D" uid="uid://b1nja16fvqoh7" path="res://Art/oppcastle-mod-tiles.png" id="1_wdg66"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="2_ujcfl"]
 [ext_resource type="PackedScene" uid="uid://8ivqohllcees" path="res://bullet.tscn" id="4_hxuj0"]
 [ext_resource type="PackedScene" uid="uid://ngdl2vrbgeyd" path="res://scaled_camera.tscn" id="4_sikwn"]
 [ext_resource type="PackedScene" uid="uid://bl7sch28f56l4" path="res://bullet_container.tscn" id="5_edoi0"]
-[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="5_xjw6a"]
-[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="6_5kybk"]
-
+[ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="7_fknx6"]
+[ext_resource type="Texture2D" uid="uid://bop0vtt1ptb1p" path="res://Art/wooden-board-pixel-art-design-free-vector-removebg-preview.png" id="8_bc84o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0qnaf"]
 texture = ExtResource("1_wdg66")
@@ -1026,11 +1025,11 @@ position = Vector2(109, 407)
 visible = false
 position = Vector2(121, 403)
 
-[node name="Signboard" parent="." instance=ExtResource("5_xjw6a")]
-position = Vector2(182, 420)
+[node name="labelSprite" parent="." instance=ExtResource("7_fknx6")]
+position = Vector2(174, 424)
 scale = Vector2(0.05, 0.05)
-Text = "Press X this is the next word let's see what happens to this"
-spriteTexture = ExtResource("6_5kybk")
+Text = "let's see how this works"
+spriteTexture = ExtResource("8_bc84o")
 
 [connection signal="facing_l" from="Character" to="." method="_on_character_facing_l"]
 [connection signal="facing_r" from="Character" to="." method="_on_character_facing_r"]
