@@ -257,6 +257,6 @@ const kingsStudy: Array[String] = [
 	]
 
 	
-var levels: Dictionary = {"level1" : chapelStatue, "l2": enter}
+var levels: Dictionary = {"intro" : intro, "enter" : enter ,"l1" : chapelStatue, "l2": castle_one, "l3": tablesStart, "l4": tablesEnd, "l5": kitchenEnter, "l6": kitchenMain, "l7": stablesOne,"l8": stablesTwo,"l9": lastChandlier,"l10": chapelEnter,"11": chapelStatue,"l12": dungeonOne,"l13": dungeonTwo,"l14": cellOne,"l15": cellTwo,"l16": cellThree,"l17": kitchenStairs,"l18": secondStairs,"l19": preStableCorridor,"l20": paintings,"l21": underMarbleStairs,"l22": topOfMarbleStairs,"l23": kingsRoomOne,"l24": kingsRoomTwo,"l25": kingsRoomThree,"l26": kingsBed,"l27": kingsCupboard,"l28": kingsStudy,"l29": enter}
 #const lines_level2: Array[String] = []
 

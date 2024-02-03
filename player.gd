@@ -31,7 +31,7 @@ func _ready():
 	animation_tree.active = true
 
 func _process(_delta):
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoots"):
 		shoot()
 
 func shoot():

@@ -808,7 +808,7 @@ texture = ExtResource("11_ystqw")
 position = Vector2(107, 21)
 scale = Vector2(12, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="levelEntry"]
 position = Vector2(1.66667, 0)
@@ -818,7 +818,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(499, -14)
 scale = Vector2(28, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="diningCheck"]
 position = Vector2(1.66667, 0)
@@ -828,7 +828,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(978, 22)
 scale = Vector2(15, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairsCheck"]
 position = Vector2(1.66667, 0)
@@ -1008,7 +1008,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1112, -493)
 scale = Vector2(7, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="statueCheck"]
 position = Vector2(1.66667, 0)

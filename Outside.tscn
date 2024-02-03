@@ -74,7 +74,7 @@ Text = "Press X for Introduction"
 [node name="labelSprite2" parent="." instance=ExtResource("5_x84rd")]
 position = Vector2(185, 85)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
+Text = "Press X for Introduction. Press Q to proceed."
 
 [node name="introCheck" type="Area2D" parent="."]
 position = Vector2(75, 90)
