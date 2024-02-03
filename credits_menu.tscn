@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://b86qll8ixtlhp"]
+
+[ext_resource type="Script" path="res://credits_menu.gd" id="1_ixrrw"]
+[ext_resource type="Texture2D" uid="uid://bqsh6khblydc0" path="res://Art/game jam 2/backgrounds/castle_view.png" id="1_mcxuv"]
+[ext_resource type="FontFile" uid="uid://bvyy6rxnq2hs7" path="res://Art/textbox/vtf-misterpixel.regular.otf" id="2_670xm"]
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ixrrw")
+
+[node name="CastleView" type="Sprite2D" parent="."]
+modulate = Color(0.498039, 0.498039, 0.498039, 1)
+position = Vector2(567, -431)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_mcxuv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 330.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_670xm")
+theme_override_font_sizes/font_size = 90
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 140.0
+offset_right = 548.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_670xm")
+theme_override_font_sizes/font_size = 45
+text = "Game Director	
+Lead Artist
+Developoer
+Programmer"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 140.0
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_670xm")
+theme_override_font_sizes/font_size = 45
+text = "Aryan Goenka
+Anna X
+Krrish Chakravarty
+Sohail Kazi"
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 47.0
+offset_right = 267.0
+offset_bottom = 157.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer4"]
+layout_mode = 2
+
+[node name="Play Button" type="Button" parent="MarginContainer4/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.72549, 0.72549, 0.72549, 1)
+theme_override_colors/icon_hover_color = Color(0.443137, 0.443137, 0.443137, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.27451, 0.27451, 0.27451, 1)
+theme_override_fonts/font = ExtResource("2_670xm")
+theme_override_font_sizes/font_size = 62
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer4/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]

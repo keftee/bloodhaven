@@ -16,8 +16,7 @@ const lines_level_1: Array[String] = [
 	]
 
 const lines_level_2: Array[String] = [
-	"Hello, dear friend",
-	"Welcome to HELL!"
+	"Hahahahahaha"
 	]	
 	
 	

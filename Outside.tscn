@@ -1,15 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4pj4nol5d1hm"]
+[gd_scene load_steps=10 format=3 uid="uid://c4pj4nol5d1hm"]
 
 [ext_resource type="Texture2D" uid="uid://dkoltrk4jom1v" path="res://Art/game jam 2/backgrounds/gatehouse front.png" id="1_uyo2g"]
 [ext_resource type="TileSet" uid="uid://ujr3i7wgvned" path="res://level_1.tres" id="2_q2k1l"]
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="3_y3teg"]
 [ext_resource type="Texture2D" uid="uid://df8efqagupya6" path="res://Art/Light Gradient Round.png" id="4_5chy8"]
 [ext_resource type="PackedScene" uid="uid://qpm32bc6bp66" path="res://objectScenes/labelSprite.tscn" id="5_x84rd"]
+[ext_resource type="Script" path="res://checkpoints/checkpoint_script.gd" id="7_8nuww"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1tkjt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1m4g"]
 size = Vector2(1150, 1780)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05gee"]
 
 [node name="Outside" type="Node2D"]
 
@@ -72,3 +75,23 @@ Text = "Press X for Introduction"
 position = Vector2(185, 85)
 scale = Vector2(0.05, 0.05)
 Text = "Press X for Introduction"
+
+[node name="introCheck" type="Area2D" parent="."]
+position = Vector2(75, 90)
+scale = Vector2(7, 1)
+script = ExtResource("7_8nuww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="introCheck"]
+shape = SubResource("RectangleShape2D_05gee")
+
+[node name="gateCheck" type="Area2D" parent="."]
+position = Vector2(184, 90)
+scale = Vector2(3, 1)
+script = ExtResource("7_8nuww")
+level = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gateCheck"]
+shape = SubResource("RectangleShape2D_05gee")
+
+[connection signal="body_entered" from="introCheck" to="introCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="gateCheck" to="gateCheck" method="_on_body_entered"]

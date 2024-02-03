@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bp04qkcu58vc5"]
+[gd_scene load_steps=26 format=3 uid="uid://bp04qkcu58vc5"]
 
 [ext_resource type="PackedScene" uid="uid://dmiv60k80r33s" path="res://Character.tscn" id="1_8duf8"]
 [ext_resource type="TileSet" uid="uid://ujr3i7wgvned" path="res://level_1.tres" id="1_cp8ev"]
@@ -16,16 +16,20 @@
 [ext_resource type="Texture2D" uid="uid://dgdto16o3ih0q" path="res://Art/game jam 2/assets/chandeliers.png" id="14_b7enc"]
 [ext_resource type="Texture2D" uid="uid://bogfrmnygk8" path="res://Art/game jam 2/backgrounds/chapel.png" id="15_ixsyc"]
 [ext_resource type="Texture2D" uid="uid://ddhk44grd81el" path="res://Art/game jam 2/assets/dead queen.png" id="16_ogtio"]
+[ext_resource type="PackedScene" uid="uid://ngdl2vrbgeyd" path="res://scaled_camera.tscn" id="17_ft5wm"]
 [ext_resource type="Texture2D" uid="uid://bdl3fng8e78cd" path="res://Art/game jam 2/assets/dead attendants.png" id="17_l3wdh"]
 [ext_resource type="Texture2D" uid="uid://c1nc2fcdqsryc" path="res://Art/game jam 2/assets/king bed.png" id="18_6g3q7"]
 [ext_resource type="Texture2D" uid="uid://cvnwdbqylvcsr" path="res://Art/game jam 2/assets/study desk.png" id="19_rrww2"]
 [ext_resource type="Texture2D" uid="uid://b5gdeukymli0l" path="res://Art/game jam 2/assets/wardrobe.png" id="20_2j554"]
+[ext_resource type="Script" path="res://checkpoints/checkpoint_script.gd" id="22_qq0ld"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1ne6s"]
 polygon = PackedVector2Array(90, -100, 160, -110, 160, -100, 90, -90)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p515m"]
 polygon = PackedVector2Array(100, -310, 90, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_payc7"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -356,12 +360,7 @@ layer_0/tile_data = PackedInt32Array(-1245127, 196609, 0, -1245128, 196609, 0, -
 [node name="Character" parent="." instance=ExtResource("1_8duf8")]
 position = Vector2(32, -1)
 
-[node name="Camera2D" type="Camera2D" parent="Character"]
-zoom = Vector2(4, 4)
-process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
+[node name="scaledCamera" parent="Character" instance=ExtResource("17_ft5wm")]
 
 [node name="Chandaliers" type="Node2D" parent="."]
 
@@ -804,3 +803,356 @@ texture = ExtResource("11_ystqw")
 position = Vector2(2600, 17)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_ystqw")
+
+[node name="levelEntry" type="Area2D" parent="."]
+position = Vector2(107, 21)
+scale = Vector2(12, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="levelEntry"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="diningCheck" type="Area2D" parent="."]
+position = Vector2(499, -14)
+scale = Vector2(28, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="diningCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="stairsCheck" type="Area2D" parent="."]
+position = Vector2(978, 22)
+scale = Vector2(15, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairsCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="kitchen_entryCheck" type="Area2D" parent="."]
+position = Vector2(1285, 18)
+scale = Vector2(8, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kitchen_entryCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="fireplaceCheck" type="Area2D" parent="."]
+position = Vector2(1456, 22)
+scale = Vector2(8, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fireplaceCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="stairs2Check" type="Area2D" parent="."]
+position = Vector2(1302, -153)
+scale = Vector2(8, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs2Check"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="floor1_hallCheck" type="Area2D" parent="."]
+position = Vector2(2008, -153)
+scale = Vector2(8, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor1_hallCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="bonesRoomDoorCheck" type="Area2D" parent="."]
+position = Vector2(2816, 17)
+scale = Vector2(4, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bonesRoomDoorCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="onBonesCheck" type="Area2D" parent="."]
+position = Vector2(2906, 17)
+scale = Vector2(4, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="onBonesCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="underStairsCheck" type="Area2D" parent="."]
+position = Vector2(1870, -355)
+scale = Vector2(4, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="underStairsCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="paintingsCheck" type="Area2D" parent="."]
+position = Vector2(1608, -352)
+scale = Vector2(8, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paintingsCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="blockedWallCheck" type="Area2D" parent="."]
+position = Vector2(1831, -473)
+scale = Vector2(3, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blockedWallCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="secretRoomCheck" type="Area2D" parent="."]
+position = Vector2(2091, -500)
+scale = Vector2(3, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="secretRoomCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dead1" type="Area2D" parent="."]
+position = Vector2(2252, -504)
+scale = Vector2(3, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dead1"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dead2" type="Area2D" parent="."]
+position = Vector2(2434, -504)
+scale = Vector2(3, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dead2"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="nicebedCheck" type="Area2D" parent="."]
+position = Vector2(2611, -503)
+scale = Vector2(2, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nicebedCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="closetCheck" type="Area2D" parent="."]
+position = Vector2(2656, -503)
+scale = Vector2(2, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="closetCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="tableCheck" type="Area2D" parent="."]
+position = Vector2(2719, -503)
+scale = Vector2(2, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tableCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="parkourCheck" type="Area2D" parent="."]
+position = Vector2(1498, -557)
+scale = Vector2(2, 1)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parkourCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="niceWindowCheck" type="Area2D" parent="."]
+position = Vector2(1329, -507)
+scale = Vector2(9, 4)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="niceWindowCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="statueCheck" type="Area2D" parent="."]
+position = Vector2(1112, -493)
+scale = Vector2(7, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="statueCheck"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon1" type="Area2D" parent="."]
+position = Vector2(2664, 282)
+scale = Vector2(7, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon1"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon2" type="Area2D" parent="."]
+position = Vector2(2431, 283)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon2"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon3" type="Area2D" parent="."]
+position = Vector2(2271, 283)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon3"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon4" type="Area2D" parent="."]
+position = Vector2(1979, 282)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon4"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon5" type="Area2D" parent="."]
+position = Vector2(1677, 285)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon5"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon6" type="Area2D" parent="."]
+position = Vector2(1382, 286)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon6"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon7" type="Area2D" parent="."]
+position = Vector2(1076, 286)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon7"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon8" type="Area2D" parent="."]
+position = Vector2(782, 285)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon8"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon9" type="Area2D" parent="."]
+position = Vector2(469, 289)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon9"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon10" type="Area2D" parent="."]
+position = Vector2(166, 285)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon10"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[node name="dungeon11" type="Area2D" parent="."]
+position = Vector2(-134, 285)
+scale = Vector2(4, 3)
+script = ExtResource("22_qq0ld")
+level = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon11"]
+position = Vector2(1.66667, 0)
+shape = SubResource("RectangleShape2D_payc7")
+
+[connection signal="body_entered" from="levelEntry" to="levelEntry" method="_on_body_entered"]
+[connection signal="body_entered" from="diningCheck" to="diningCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="stairsCheck" to="stairsCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="kitchen_entryCheck" to="kitchen_entryCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="fireplaceCheck" to="fireplaceCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="stairs2Check" to="stairs2Check" method="_on_body_entered"]
+[connection signal="body_entered" from="floor1_hallCheck" to="floor1_hallCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="bonesRoomDoorCheck" to="bonesRoomDoorCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="onBonesCheck" to="onBonesCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="underStairsCheck" to="underStairsCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="paintingsCheck" to="paintingsCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="blockedWallCheck" to="blockedWallCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="secretRoomCheck" to="secretRoomCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="dead1" to="dead1" method="_on_body_entered"]
+[connection signal="body_entered" from="dead2" to="dead2" method="_on_body_entered"]
+[connection signal="body_entered" from="nicebedCheck" to="nicebedCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="closetCheck" to="closetCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="tableCheck" to="tableCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="parkourCheck" to="parkourCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="niceWindowCheck" to="niceWindowCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="statueCheck" to="statueCheck" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon1" to="dungeon1" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon2" to="dungeon2" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon3" to="dungeon3" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon4" to="dungeon4" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon5" to="dungeon5" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon6" to="dungeon6" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon7" to="dungeon7" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon8" to="dungeon8" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon9" to="dungeon9" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon10" to="dungeon10" method="_on_body_entered"]
+[connection signal="body_entered" from="dungeon11" to="dungeon11" method="_on_body_entered"]
