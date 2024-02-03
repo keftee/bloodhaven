@@ -113,7 +113,7 @@ func _unhandled_input(event):
 		GlobalScript.SPEED = 0
 		GlobalScript.JUMP_VELOCITY = 0
 		DialogueManager.start_dialogue(global_position, GlobalScript.levels["level" + str(GlobalScript.level)])
- 
+
 
 func _on_dash_timer_timeout():
 	dashing = false # Replace with function body.

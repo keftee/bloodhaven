@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ngdl2vrbgeyd"]
+
+[node name="scaledCamera" type="Camera2D"]
+zoom = Vector2(4, 4)
+process_callback = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
