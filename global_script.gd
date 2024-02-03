@@ -2,7 +2,7 @@ extends Node
 
 var SPEED = 150
 var JUMP_VELOCITY = -300
-var level = 1
+var level = 0
 
 const intro: Array[String] = [
 	"You feel the wind rustling as you approach 
@@ -257,6 +257,6 @@ const kingsStudy: Array[String] = [
 	]
 
 	
-var levels: Dictionary = {"intro" : intro, "enter" : enter ,"l1" : chapelStatue, "l2": castle_one, "l3": tablesStart, "l4": tablesEnd, "l5": kitchenEnter, "l6": kitchenMain, "l7": stablesOne,"l8": stablesTwo,"l9": lastChandlier,"l10": chapelEnter,"11": chapelStatue,"l12": dungeonOne,"l13": dungeonTwo,"l14": cellOne,"l15": cellTwo,"l16": cellThree,"l17": kitchenStairs,"l18": secondStairs,"l19": preStableCorridor,"l20": paintings,"l21": underMarbleStairs,"l22": topOfMarbleStairs,"l23": kingsRoomOne,"l24": kingsRoomTwo,"l25": kingsRoomThree,"l26": kingsBed,"l27": kingsCupboard,"l28": kingsStudy,"l29": enter}
+var levels: Dictionary = {"l0" : intro, "l1" : enter ,"l2" : castle_one, "l3": tablesStart, "l4": kitchenStairs, "l5": kitchenEnter, "l6": kitchenMain, "l7": secondStairs, "l8": preStableCorridor,"l9": stablesOne,"l10": stablesTwo,"l11": underMarbleStairs,"l12": paintings,"l13": kingsRoomOne,"l14": kingsRoomTwo,"l15": kingsRoomThree,"l16": kingsBed,"l17": kingsCupboard,"l18": kingsStudy,"l19": lastChandlier,"l20": chapelEnter,"l21": chapelStatue,"l22": dungeonOne,"l23": dungeonTwo,"l24": cellOne,"l25": cellTwo,"l26": cellThree}
 #const lines_level2: Array[String] = []
 

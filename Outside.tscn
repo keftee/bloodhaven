@@ -69,7 +69,6 @@ texture_scale = 0.5
 [node name="labelSprite" parent="." instance=ExtResource("5_x84rd")]
 position = Vector2(31, 86)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite2" parent="." instance=ExtResource("5_x84rd")]
 position = Vector2(185, 85)

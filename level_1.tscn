@@ -475,162 +475,130 @@ polygon = PackedVector2Array(4, -4, -549, 1, -548, 33, 4, 34)
 [node name="labelSprite" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(62, 21)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite2" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(297, -18)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite3" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1462, 8)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite4" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1067, 11)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite5" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1308, -172)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite6" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1994, -174)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite7" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2673, 276)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite8" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2832, 21)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite9" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2910, 20)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite10" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1279, 13)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite11" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1613, -362)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite12" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1848, -485)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite13" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1877, -362)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite14" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1108, -482)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite15" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1500, -558)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite16" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1346, -504)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite17" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2098, -504)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite18" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2261, -503)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite19" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2437, -503)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite20" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2615, -503)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite21" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2722, -501)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite22" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2659, -504)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite23" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2438, 288)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite24" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(2278, 288)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite25" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1979, 284)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite26" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1678, 284)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite27" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1382, 286)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite28" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(1075, 284)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite29" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(779, 282)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite30" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(479, 285)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite31" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(178, 285)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="labelSprite32" parent="Labels" instance=ExtResource("2_8xoca")]
 position = Vector2(-123, 286)
 scale = Vector2(0.05, 0.05)
-Text = "Press X for Introduction"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.101961, 0.101961, 0.101961, 1)
@@ -808,7 +776,7 @@ texture = ExtResource("11_ystqw")
 position = Vector2(107, 21)
 scale = Vector2(12, 1)
 script = ExtResource("22_qq0ld")
-level = 4
+level = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="levelEntry"]
 position = Vector2(1.66667, 0)
@@ -818,7 +786,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(499, -14)
 scale = Vector2(28, 1)
 script = ExtResource("22_qq0ld")
-level = 5
+level = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="diningCheck"]
 position = Vector2(1.66667, 0)
@@ -828,7 +796,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(978, 22)
 scale = Vector2(15, 1)
 script = ExtResource("22_qq0ld")
-level = 6
+level = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairsCheck"]
 position = Vector2(1.66667, 0)
@@ -838,7 +806,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1285, 18)
 scale = Vector2(8, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kitchen_entryCheck"]
 position = Vector2(1.66667, 0)
@@ -848,7 +816,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1456, 22)
 scale = Vector2(8, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fireplaceCheck"]
 position = Vector2(1.66667, 0)
@@ -858,7 +826,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1302, -153)
 scale = Vector2(8, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs2Check"]
 position = Vector2(1.66667, 0)
@@ -868,7 +836,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2008, -153)
 scale = Vector2(8, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor1_hallCheck"]
 position = Vector2(1.66667, 0)
@@ -878,7 +846,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2816, 17)
 scale = Vector2(4, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bonesRoomDoorCheck"]
 position = Vector2(1.66667, 0)
@@ -888,7 +856,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2906, 17)
 scale = Vector2(4, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="onBonesCheck"]
 position = Vector2(1.66667, 0)
@@ -898,7 +866,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1870, -355)
 scale = Vector2(4, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="underStairsCheck"]
 position = Vector2(1.66667, 0)
@@ -908,7 +876,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1608, -352)
 scale = Vector2(8, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paintingsCheck"]
 position = Vector2(1.66667, 0)
@@ -918,7 +886,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1831, -473)
 scale = Vector2(3, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blockedWallCheck"]
 position = Vector2(1.66667, 0)
@@ -928,7 +896,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2091, -500)
 scale = Vector2(3, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="secretRoomCheck"]
 position = Vector2(1.66667, 0)
@@ -938,7 +906,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2252, -504)
 scale = Vector2(3, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dead1"]
 position = Vector2(1.66667, 0)
@@ -948,7 +916,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2434, -504)
 scale = Vector2(3, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dead2"]
 position = Vector2(1.66667, 0)
@@ -958,7 +926,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2611, -503)
 scale = Vector2(2, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nicebedCheck"]
 position = Vector2(1.66667, 0)
@@ -968,7 +936,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2656, -503)
 scale = Vector2(2, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="closetCheck"]
 position = Vector2(1.66667, 0)
@@ -978,7 +946,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2719, -503)
 scale = Vector2(2, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tableCheck"]
 position = Vector2(1.66667, 0)
@@ -988,7 +956,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1498, -557)
 scale = Vector2(2, 1)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="parkourCheck"]
 position = Vector2(1.66667, 0)
@@ -998,7 +966,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1329, -507)
 scale = Vector2(9, 4)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="niceWindowCheck"]
 position = Vector2(1.66667, 0)
@@ -1008,7 +976,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1112, -493)
 scale = Vector2(7, 3)
 script = ExtResource("22_qq0ld")
-level = 3
+level = 21
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="statueCheck"]
 position = Vector2(1.66667, 0)
@@ -1018,7 +986,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2664, 282)
 scale = Vector2(7, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon1"]
 position = Vector2(1.66667, 0)
@@ -1028,7 +996,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2431, 283)
 scale = Vector2(4, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 23
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon2"]
 position = Vector2(1.66667, 0)
@@ -1038,7 +1006,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(2271, 283)
 scale = Vector2(4, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon3"]
 position = Vector2(1.66667, 0)
@@ -1048,7 +1016,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(1076, 286)
 scale = Vector2(4, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 25
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon7"]
 position = Vector2(1.66667, 0)
@@ -1058,7 +1026,7 @@ shape = SubResource("RectangleShape2D_payc7")
 position = Vector2(469, 289)
 scale = Vector2(4, 3)
 script = ExtResource("22_qq0ld")
-level = 2
+level = 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon9"]
 position = Vector2(1.66667, 0)

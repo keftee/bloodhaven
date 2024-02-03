@@ -112,7 +112,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
 		GlobalScript.SPEED = 0
 		GlobalScript.JUMP_VELOCITY = 0
-		DialogueManager.start_dialogue(global_position, GlobalScript.levels["level" + str(GlobalScript.level)])
+		DialogueManager.start_dialogue(global_position, GlobalScript.levels["l" + str(GlobalScript.level)])
 
 
 func _on_dash_timer_timeout():
