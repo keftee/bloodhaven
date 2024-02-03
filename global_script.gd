@@ -11,9 +11,15 @@ const lines_level_0: Array[String] = [
 	]
 
 const lines_level_1: Array[String] = [
-	"This is my home.",
-	"I am at peace here.",
-	"Wait, who is this guy?"
+	"Hello, dear friend",
+	"Welcome to HELL!"
 	]
-var levels: Dictionary = {"level0" : lines_level_0, "level1" : lines_level_1}
+
+const lines_level_2: Array[String] = [
+	"Hello, dear friend",
+	"Welcome to HELL!"
+	]	
+	
+	
+var levels: Dictionary = {"level0" : lines_level_0, "level1" : lines_level_1, "level2" : lines_level_2}
 #const lines_level2: Array[String] = []
