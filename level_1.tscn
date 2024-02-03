@@ -1044,36 +1044,6 @@ level = 2
 position = Vector2(1.66667, 0)
 shape = SubResource("RectangleShape2D_payc7")
 
-[node name="dungeon4" type="Area2D" parent="."]
-position = Vector2(1979, 282)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon4"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
-[node name="dungeon5" type="Area2D" parent="."]
-position = Vector2(1677, 285)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon5"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
-[node name="dungeon6" type="Area2D" parent="."]
-position = Vector2(1382, 286)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon6"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
 [node name="dungeon7" type="Area2D" parent="."]
 position = Vector2(1076, 286)
 scale = Vector2(4, 3)
@@ -1084,16 +1054,6 @@ level = 2
 position = Vector2(1.66667, 0)
 shape = SubResource("RectangleShape2D_payc7")
 
-[node name="dungeon8" type="Area2D" parent="."]
-position = Vector2(782, 285)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon8"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
 [node name="dungeon9" type="Area2D" parent="."]
 position = Vector2(469, 289)
 scale = Vector2(4, 3)
@@ -1101,26 +1061,6 @@ script = ExtResource("22_qq0ld")
 level = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon9"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
-[node name="dungeon10" type="Area2D" parent="."]
-position = Vector2(166, 285)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon10"]
-position = Vector2(1.66667, 0)
-shape = SubResource("RectangleShape2D_payc7")
-
-[node name="dungeon11" type="Area2D" parent="."]
-position = Vector2(-134, 285)
-scale = Vector2(4, 3)
-script = ExtResource("22_qq0ld")
-level = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dungeon11"]
 position = Vector2(1.66667, 0)
 shape = SubResource("RectangleShape2D_payc7")
 
@@ -1148,11 +1088,5 @@ shape = SubResource("RectangleShape2D_payc7")
 [connection signal="body_entered" from="dungeon1" to="dungeon1" method="_on_body_entered"]
 [connection signal="body_entered" from="dungeon2" to="dungeon2" method="_on_body_entered"]
 [connection signal="body_entered" from="dungeon3" to="dungeon3" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon4" to="dungeon4" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon5" to="dungeon5" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon6" to="dungeon6" method="_on_body_entered"]
 [connection signal="body_entered" from="dungeon7" to="dungeon7" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon8" to="dungeon8" method="_on_body_entered"]
 [connection signal="body_entered" from="dungeon9" to="dungeon9" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon10" to="dungeon10" method="_on_body_entered"]
-[connection signal="body_entered" from="dungeon11" to="dungeon11" method="_on_body_entered"]
