@@ -4,8 +4,7 @@ extends MarginContainer
 @onready var label = $MarginContainer/Label
 @onready var timer = $LetterDisplayTimer
 
-
-const MAX_WIDTH = 100000
+const MAX_WIDTH = 1000000
 
 
 var text = ""
